@@ -35,6 +35,26 @@ $(function() {
 </script>
 <!-- End of SMOOTH SCROLL -->
 
+<script>
+jQuery(document).ready(function($){
+
+var currentVid = $('video')[0].currentSrc,  
+supportedType;
+
+
+   supportedType = 'mp4';
+
+
+if ($(window).innerWidth() < 768) {  
+   $('video')[0].src = $('video .' + supportedType + '.sp ').attr('src');
+} else {
+   $('video')[0].src = $('video .' + supportedType + '.hd ').attr('src');
+}
+
+});
+</script>			 
+
+
 <style>
 
 video#bgvid { 
@@ -43,117 +63,29 @@ video#bgvid {
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
+    width: 105%;
+    height: 105%;
     z-index: -100;
     -ms-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(star.gif) no-repeat;
+    background: url(biteme.gif) no-repeat;
     background-size: cover; 
 }
 
 
 
 
-@media screen and (max-device-width: 800px) {
-    html {
-         
-		 
-    }
-    video#bgvid {
-        position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: 150%;
-    height: 150%;
-    z-index: -200;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(star.gif) no-repeat;
-    background-size: cover;
-		
-    }
-}
 
 
-@media screen and (max-device-width: 732px) {
-    html {
-         
-		 
-    }
-    video#bgvid {
-        position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: 120%;
-    height: 120%;
-    z-index: -200;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(star.gif) no-repeat;
-    background-size: cover;
-		
-    }
-}
 
 
- @media screen and (max-device-width: 667px) {
-    html {
-         
-		 
-    }
-    video#bgvid {
-        position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 10%;
-    min-height: 10%;
-    width: 80%;
-    height: 80%;
-    z-index: -200;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(star.gif) no-repeat;
-    background-size: cover;
-		
-    }
-}
 
-@media screen and (max-device-width: 412px) {
-    html {
-         
-		 
-    }
-    video#bgvid {
-        position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 10%;
-    min-height: 10%;
-    width: 150%;
-    height: 150%;
-    z-index: -200;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(star.gif) no-repeat;
-    background-size: cover;
-		
-    }
-}
+
+
+
+
 
 
 </style>
@@ -167,8 +99,9 @@ video#bgvid {
 	
 	<video playsinline autoplay  controls loop id="bgvid">
 	
-	 <source src="yonkers.webm" type="video/webm">
-	 <source src="yonkers.mp4" type="video/mp4">
+	 <source src="Chew.webm" type="video/webm">
+	 <source class="mp4 hd" src="Chew.mp4" type="video/mp4">
+	 <source class="mp4 sp" src="Chew mob.mp4" type="video/mp4">
 </video>
 <!--</div>-->
 
